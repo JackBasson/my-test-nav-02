@@ -1,0 +1,96 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Toggle Button */
+.navbar-toggle {
+    position: absolute;
+    top: 1rem;
+    font-size: 1.5rem;
+    background: var(--primary);
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    cursor: pointer;
+    color: var(--titlecolor);
+    z-index: 1000;
+    color: black;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    width: 250px;
+    height: 100vh;
+    padding: 2rem 1rem;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    border-radius: 0 10px 10px 0;
+    transition: left 0.4s ease; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Show the Navbar When Active */
+.navbar.active {
+    left: 0; 
+}
+
+/* Navbar Logo */
+.navbar-logo a {
+    color: var(--titlecolor);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--navtitlefont);
+    margin-bottom: 2rem;
+}
+
+.navbar-logo {
+    margin-top: 2rem;
+}
+
+/* Navbar Links */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.navbar-links li {
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.navbar-links a {
+    color: var(--navlinks);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-family: var(--navlinksfont);
+    transition: all 0.3s ease;
+}
+
+/* Link Hover Effects */
+.navbar-links a:hover {
+    background: rgba(13, 27, 84, 0.2); /* Adjusted to match --primary */
+    color: #ffffff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        width: 200px; /* Narrower for small screens */
+    }
+}
